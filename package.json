@@ -1,0 +1,18 @@
+{
+  "name": "yarnport-test",
+  "author": "Simon Jornet",
+  "version": "1.0.0",
+  "description": "Configuration basique d'un aspirateur automatique.",
+  "main": "main.js",
+  "scripts": {
+    "watch": "tsc --watch",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "chalk": "^4.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^15.3.0",
+    "typescript": "^4.2.4"
+  }
+}

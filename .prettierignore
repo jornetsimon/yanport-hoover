@@ -1,0 +1,6 @@
+.idea/
+dist/
+package*.json
+.gitignore
+.prettierignore
+README.md
