@@ -12,14 +12,18 @@ if (!(args.length >= 3)) {
 }
 const [dimensionsArg, positionArg, instructionsArg] = args;
 
+// Build the grid
 const gridDimensions = Grid.parseDimensions(dimensionsArg.split(','));
 const grid = new Grid(gridDimensions);
+
+// Build the hoover
 const hooverPosition = Hoover.parsePosition(positionArg.split(','));
 const orientationInput = positionArg.split(',')[2];
 const hooverOrientation = isOrientation(orientationInput) ? orientationInput : 'N'; // Orientation defaults to N
 const hooverInstructions = Hoover.validateInstructions([...instructionsArg]);
 const hoover = new Hoover(grid, hooverPosition, hooverOrientation, hooverInstructions);
 
+// Run the hoover
 const finalState = hoover.run();
 console.log(
 	chalk.greenBright(`Position finale : x=${finalState.x} y=${finalState.y} orientation=${finalState.orientation}`)
